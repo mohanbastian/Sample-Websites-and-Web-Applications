@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Destinations.net</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+    <div class="brand">My Destinations.net</div>
+    <div class="address-bar">42A Baybrook Place | Colombo,Sri Lanka | 0778101401</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">My Destinations.net</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="main.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="activities.html">Activities and Events</a>
+                    </li>
+                    <li>
+                        <a href="destination.html">Destinations and Hotels</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Resort 3</strong>
+                    </h2>
+                    <hr>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <img class="img-responsive img-border img-full" src="img/destination/SouthAmerica/h1.jpg" alt="">
+                    <h2>Gabbanas
+                        <br>
+                        <small>South Africa</small>
+                    </h2>
+
+                    <hr>
+                </div>
+                <div class="col-lg-12" id="details">
+
+                </div>
+
+            </div>
+            <!-- End of the Box container -->
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; My Destinations.net (2015)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</body>
+<script type="text/javascript">
+    var data = {
+        "resorts": [
+            {
+                "id": "resort3",
+                "destination": "South America",
+                "name": "Hotel De Palace",
+                "location": "Brazil",
+                "comfortLevel": "5",
+                "activities": "water skiing, tennis, scuba diving, kitesurf, spa",
+                "price": 1254,
+                "startDate": "2016-01-01",
+                "endDate": "2016-12-31",
+                "short_description": "The resort of Les Boucaniers is located on the laid-back beach-covered south coast of the island, and is perfectly placed for Martinique holidays that are both relaxing and awe-inspiring.",
+                "picture": "images/resort1pic1small.jpg",
+                "long_description": "A divers' paradise in the Baie du Marin, a legendary spot.<br>Its bungalows are discreetly lodged in a tropical garden beside the white sand beach in superb Marin Bay. A magical site where you can enjoy a taste of everything, alone or with family or friends. Try water sports and the magnificent Club Med Spa*. You'll be enchanted by the exotic flavours of the local cuisine and the joyful spirit of the Caribbean.",
+                "url": "resort3.html"
+        }]
+    }
+
+    $(document).ready(function () {
+
+        //start the list
+        var output = '</ul>';
+        for (var i in data.resorts) {
+            output += '<li><strong>Destination:</strong> ' + data.resorts[i].destination + '</li>';
+            output += '<li><strong>Location:</strong> ' + data.resorts[i].location + '</li>';
+            output += '<li><strong>Comfort Level:</strong> ' + data.resorts[i].comfortLevel + ' Stars</li>';
+            output += '<li><strong>Available Activities:</strong> ' + data.resorts[i].activities + '</li>';
+            output += '<li><strong>Price per night:</strong> ' + data.resorts[i].price + '</li>';
+            output += '<li><strong>Description:</strong> ' + data.resorts[i].long_description + '</li>';
+        }
+        output += '</ul>';
+        document.getElementById("details").innerHTML = output;
+
+    });
+</script>
+
+</html>
