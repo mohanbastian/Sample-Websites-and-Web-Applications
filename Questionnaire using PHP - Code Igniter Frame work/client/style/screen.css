@@ -1,0 +1,142 @@
+body {
+    background-color: #eee;
+}
+
+.quizContainer {
+    outline: 1px solid #aaa;
+    width: 700px;
+    height: 200px;
+    background-color: #fff;
+    float: left;
+    margin: 5px;
+}
+
+.quizContainer img {
+    float: left;
+    margin: 10px;
+}
+
+.quizContainer ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.quizContainer button {
+    float: right;
+    margin: 10px;
+}
+
+#addQuiz label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 25px;
+}
+
+#addQuiz label, #addQuiz input {
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#addQuiz label[for="title"], #addQuiz label[for="releaseDate"] {
+    clear: both;
+}
+
+#addQuiz button {
+    display: block;
+    margin: 5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+
+#addQuiz div {
+    width: 600px;
+}
+
+#addQuiz div:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+
+.categoryContainer{
+    width: 100%;
+}
+
+.categoryContainer ul{
+    padding: 0; /* remove default padding and all margins! */
+    margin: 0;
+    list-style-type: none;
+}
+
+.categoryContainer ul li{
+    text-align: center;
+    width: 20%;
+    height: 100px;
+    line-height: 100px;
+    background-color: #003399;
+    float: left;
+    margin:5px;
+    border-radius: 10px;
+}
+
+.categoryContainer ul li a{
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal; 
+}
+
+.ibox {
+	border:1px solid #456879;
+	border-radius:5px;
+	height: 28px;
+	width: 40%;
+        margin-bottom: 10px;
+}
+.table-fix {
+    width: 90%;
+    margin-bottom: 20px;
+}
+.ilabel {
+    width: 100px;
+}
+
+.ilLeft {
+    /*position:relative;*/
+    float:left;
+    width:48%;
+}
+
+.ilRight {
+    /*position:absolute;*/
+    float:right;
+    width:48%;
+    height:80%
+}
+
+.il-edit {
+    position: absolute;
+    margin: 15px;
+}
+
+.il-delete {
+    position: relative;
+    margin-top: 40px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #aaf;
+    text-shadow: none;
+    -webkit-transition: 500ms linear 0s;
+    -moz-transition: 500ms linear 0s;
+    -o-transition: 500ms linear 0s;
+    transition: 500ms linear 0s;
+    outline: 0 none;
+}
